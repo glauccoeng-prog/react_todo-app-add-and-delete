@@ -192,6 +192,8 @@ export const App: React.FC = () => {
               onDelete={handleDeleteTodo}
             />
 
+            {tempTodo && <TodoItem todo={tempTodo} isLoading />}
+
             <TodoFooter
               activeTodosCount={activeTodosCount}
               filterStatus={filterStatus}
@@ -201,8 +203,6 @@ export const App: React.FC = () => {
             />
           </>
         )}
-
-        {tempTodo && <TodoItem todo={tempTodo} isLoading />}
       </div>
 
       <ErrorNotification
